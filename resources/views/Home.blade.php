@@ -3,6 +3,20 @@
 @section('title', 'Home')
 
 @section('content')
+<style>
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        width: 50px;
+        height: 50px;
+        border-radius: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
 
 <div class="d-flex row">
 
@@ -13,9 +27,8 @@
             </div>
         </div>
 
-        <div class="d-flex ms-3 row justify-content-start m-1">
-            <p>IT REALLY COUNTS</p>
-
+        <div class="d-flex ms-3 row  mt-1 mb-3">
+            <p style="text-decoration: underline;">IT REALLY COUNTS</p>
 
             <h3>{{ $bookz[0]->title }}</h3>
             <p>{{ $bookz[0]->description }}</p>
@@ -26,7 +39,7 @@
         <div class="d-flex row ">
             <div class="ms-4 mt-3">
 
-                <p>LATEST BOOK REVIEW</p>
+                <p style="text-decoration: underline;">LATEST BOOK REVIEW</p>
             </div>
 
             <div class="d-flex col">
@@ -46,7 +59,7 @@
         <div class="carousel-inner mt-3">
             <div class="ms-4 mt-3">
 
-                <p>IT REALLY COUNTS</p>
+                <p style="text-decoration: underline;">Book Series Review</p>
             </div>
             @foreach ($books->chunk(3) as $index => $chunk)
                 <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
@@ -56,7 +69,7 @@
                                 <div class="d-flex row ms-3 m-auto mb-3">
                                     <img src="{{ $book->image }}" style="width: 300px; height: 170px;">
                                     <h3>{{ $book->title }}</h3>
-                                    <a href="/detail/{{ $book->id }}" class="btn btn-primary ms-3" style="width:100px;">Detail</a>
+                                    <a href="/detail/{{ $book->id }}" class="btn btn-primary ms-3" style="width:100px;">Read Post</a>
                                 </div>
                             </div>
                         @endforeach
@@ -64,11 +77,11 @@
                 </div>
             @endforeach
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#bookCarousel" data-bs-slide="prev">
+        <button class="carousel-control-prev ms-5" type="button" data-bs-target="#bookCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#bookCarousel" data-bs-slide="next">
+        <button class="carousel-control-next me-5" type="button" data-bs-target="#bookCarousel" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
