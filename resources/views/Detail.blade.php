@@ -14,11 +14,11 @@
     <div class="d-flex col align-items-center">
         By {{ $books->author }} | {{ $books->date }}
         @if ($books->readingtime_id == 1)
-            <a href="" class="btn btn-primary ms-3" style="width:150px; background-color: green;">Long Reads</a>
+            <a type="hidden" href="" class="btn btn-primary ms-3" style="width:150px; background-color: green;">Long Reads</a>
         @elseif ($books->readingtime_id == 2)
-            <a href="" class="btn btn-primary ms-3" style="width:150px; background-color: green;">Medium Reads</a>
+            <a type="hidden" href="" class="btn btn-primary ms-3" style="width:150px; background-color: green;">Medium Reads</a>
         @else
-            <a href="" class="btn btn-primary ms-3" style="width:150px; background-color: green;">Other Reads</a>
+            <a type="hidden" href="" class="btn btn-primary ms-3" style="width:150px; background-color: green;">Other Reads</a>
         @endif
         <div>
             @foreach ($categories as $cat)
