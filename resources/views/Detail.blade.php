@@ -27,6 +27,7 @@
                     {{ $cat->name }}
                 </a>
             @endforeach
+
         </div>
 
         <div>
