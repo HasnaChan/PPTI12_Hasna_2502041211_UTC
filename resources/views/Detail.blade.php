@@ -18,7 +18,7 @@
         @elseif ($books->readingtime_id == 2)
             <a type="hidden" href="" class="btn btn-primary ms-3" style="width:150px; background-color: green;">Medium Reads</a>
         @else
-            <a type="hidden" href="" class="btn btn-primary ms-3" style="width:150px; background-color: green;">Other Reads</a>
+            <a type="hidden" href="" class="btn btn-primary ms-3" style="width:150px; background-color: green;">Quick Reads</a>
         @endif
         <div>
             @foreach ($categories as $cat)
