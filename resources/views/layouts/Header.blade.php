@@ -1,14 +1,31 @@
 {{-- Header --}}
 
 <header>
-    <div class="text-center bg-warning text-white p-5">
-        <h1>Giant Book Supplier</h1>
+    <div class="d-flex container m-auto d-flex col row text-start ">
+        <div class="d-flex col text-start p-5">
+            <div>
+                <h1>WirjawanNotes</h1>
+            </div>
+            <div class="d-flex  ms-3 row">
+                <div>
+                    THE BLOG
+                </div>
+                <div>
+                    OF GITA WIRJAWAN
+                </div>
+
+            </div>
+
+        </div>
+        <div style="height:2px; background-color: black;">
+
+        </div>
     </div>
 </header>
 
 {{-- Navbar --}}
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+{{-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container justify-content-center" >
 
 
@@ -54,4 +71,4 @@
         </ul>
       </div>
     </div>
-</nav>
+</nav> --}}
